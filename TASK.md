@@ -35,8 +35,27 @@ Content-Type: application/json
 ...
 
 {
-  "status": "",
-  "code": 200
+  "message": "OK",
+  "code": 200,
+  "data": {
+     "id": 123,
+     "text": "Advertisement1",
+     "banner": "https://linktoimage.png"   
+  }
+}
+```
+
+Пример ответа с ошибкой валидации поля
+
+```http request
+HTTP/1.1 200 OK
+Content-Type: application/json
+...
+
+{
+  "message": "Invalid banner link",
+  "code": 400,
+  "data": {}
 }
 ```
 
@@ -64,8 +83,13 @@ Content-Type: application/json
 ...
 
 {
-  "status": "",
-  "code": 200
+  "message": "OK",
+  "code": 200,
+  "data": {
+     "id": 123,
+     "text": "Advertisement1",
+     "banner": "https://linktoimage.png"   
+  }
 }
 ```
 
@@ -90,8 +114,13 @@ Content-Type: application/json
 ...
 
 {
-  "status": "",
-  "code": 200
+  "message": "OK",
+  "code": 200,
+  "data": {
+    "id": 123,
+    "text": "Advertisement123",
+    "banner": "https://linktoimage.png"
+  }
 }
 ```
 
